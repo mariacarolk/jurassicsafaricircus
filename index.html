@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Jurassic Safari Circus | Zona Norte de São Paulo</title>
+<meta name="description" content="Uma experiência inédita invade a Zona Norte de São Paulo! No estacionamento do Partage Santana, a partir de 03 de outubro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dourado:#f0c419;
+    --dourado-claro:#f5d873;
+    --verde-escuro:#0b3d24;
+    --creme:#f5efe0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html, body{ height:100%; overflow:hidden; }
+  body{
+    font-family:'Baloo 2', sans-serif;
+    background:#000;
+    color:var(--creme);
+  }
+
+  .hero{
+    position:relative;
+    height:100dvh;
+    height:100svh;
+    width:100%;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+  }
+  .bg{
+    position:absolute; inset:0;
+    background-image:url('assets/wallpaper.jpg');
+    background-size:cover;
+    background-position:center 38%;
+    filter:brightness(.88) saturate(.85);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg,
+      rgba(3,8,5,.15) 0%,
+      rgba(3,8,5,.45) 42%,
+      rgba(3,8,5,.9) 68%,
+      rgba(3,8,5,.99) 100%);
+    pointer-events:none;
+  }
+
+  .content{
+    position:relative; z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:0 22px clamp(14px, 3dvh, 30px);
+  }
+
+  .logo{
+    width:min(230px, 54vw);
+    margin-bottom:clamp(4px, 1.2dvh, 10px);
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.65));
+  }
+
+  .info-panel{
+    background:rgba(4,10,6,.72);
+    border-radius:16px;
+    padding:clamp(10px, 2dvh, 18px) clamp(16px, 4vw, 30px);
+    margin-top:clamp(4px, 1dvh, 10px);
+  }
+
+  .linha1{
+    font-family:'Anton', sans-serif;
+    color:#e6b84e;
+    font-size:clamp(.8rem, 2.5dvh, 1.15rem);
+    line-height:1.28;
+    text-transform:uppercase;
+    letter-spacing:.3px;
+    max-width:560px;
+    text-shadow:0 2px 4px rgba(0,0,0,.9);
+  }
+  .linha2{
+    font-family:'Anton', sans-serif;
+    color:#fff;
+    font-size:clamp(1.2rem, 3.6dvh, 1.75rem);
+    text-transform:uppercase;
+    margin-top:clamp(5px, 1.2dvh, 10px);
+    letter-spacing:.3px;
+    text-shadow:0 2px 4px rgba(0,0,0,.9);
+  }
+  .linha3{
+    margin-top:clamp(3px, 1dvh, 8px);
+    font-size:clamp(.72rem, 2.1dvh, 1rem);
+    font-weight:700;
+    text-transform:uppercase;
+    text-shadow:0 2px 4px rgba(0,0,0,.9);
+  }
+  .linha3 span{ color:var(--dourado); }
+
+  .btn-ingresso{
+    margin-top:clamp(10px, 2.2dvh, 22px);
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1px;
+    text-decoration:none;
+    background:linear-gradient(180deg, var(--dourado-claro), var(--dourado) 60%, #c99d0f);
+    color:var(--verde-escuro);
+    font-family:'Anton', sans-serif;
+    font-size:clamp(1.2rem, 4dvh, 1.8rem);
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    padding:clamp(10px, 2.1dvh, 18px) clamp(28px, 6.5vw, 44px);
+    border-radius:12px;
+    box-shadow:0 5px 0 #a9740f, 0 12px 24px rgba(0,0,0,.55);
+    border:3px solid #fff3d0;
+  }
+  .btn-ingresso small{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:clamp(.62rem, 1.5dvh, .72rem);
+    letter-spacing:1px;
+    color:var(--verde-escuro);
+    opacity:.8;
+    text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="bg"></div>
+    <div class="content">
+      <img class="logo" src="assets/logo.png" alt="Jurassic Safari Circus">
+
+      <div class="info-panel">
+        <p class="linha1">Um fabuloso espetáculo circense com incríveis atrações em um ambiente temático do universo animal e jurássico</p>
+        <p class="linha2">A partir do dia 03 de outubro</p>
+        <p class="linha3">Garanta já seu lugar: <span>jurassicsafaricircus.com.br</span></p>
+      </div>
+
+      <a href="https://www.google.com" target="_blank" rel="noopener" class="btn-ingresso">
+        🎟️ Adquirir Ingresso
+        <small>Garanta já seu lugar</small>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
