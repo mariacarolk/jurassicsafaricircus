@@ -40,6 +40,12 @@
     background-position:center 38%;
     filter:brightness(.88) saturate(.85);
   }
+  @media (max-aspect-ratio: 4/5){
+    /* telas estreitas e altas (celular): a foto é bem mais larga que o celular,
+       então ao cobrir a tela sobra muito céu vazio em cima. Empurra a imagem
+       pra cima (recorta o céu) sem cortar nada de baixo. */
+    .bg{ top:-22%; bottom:0; }
+  }
   .hero::before{
     content:"";
     position:absolute; inset:0;
